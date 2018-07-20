@@ -34,7 +34,7 @@ export default class LoginScreen extends React.Component {
                 trainingsSchema: [{
                     "_id":"5b4f4388d1e0bd202c4b0860",
                     "name":"Fiets",
-                    "description":"stap erop, getalleks ingeven & letsgoooh",
+                    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\\"\",\n",
                     "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
                     "type":"Cardio",
                     "watt":350,

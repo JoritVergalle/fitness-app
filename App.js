@@ -30,7 +30,7 @@ const RootNavigator = createStackNavigator(
         Home: {
             screen: HomeScreen,
             navigationOptions: {
-                title: "Training Schema"
+                title: "Trainingsschema"
             }
         },
         Detail: {
