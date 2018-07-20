@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import {View, Text, Image, StyleSheet} from 'react-native';
 
 export default class DetailScreen extends React.Component {
     // static navigationOptions = {
@@ -8,15 +8,37 @@ export default class DetailScreen extends React.Component {
 
     render() {
         const { navigation } = this.props;
-        const name = navigation.getParam('name', 'no-name');
-        const description = navigation.getParam('description', 'no description');
+        //const name = navigation.getParam('name', 'no-name');
+        //const description = navigation.getParam('description', 'no description');
+        const item = navigation.getParam('item');
+
         return (
-            <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#242424'}}>
-                <Text style={{padding: 5, fontSize: 35, fontWeight:'bold', textDecorationLine: 'underline', color:'#409915'}}>{name}</Text>
-                {/*<Image source={{uri: 'https://image.freepik.com/iconen-gratis/stok-man-lopen-op-een-loopband_318-47657.jpg'}}*/}
-                       {/*style={{width: '100%', height:200, resizeMode: 'contain'}}/>*/}
-                <Text style={{textAlign: 'center', color: 'white'}}>{description}</Text>
+            <View style={styles.container}>
+
+                <Text style={styles.titleText}>{item.name}</Text>
+                <Text style={{textAlign: 'center', color: 'white'}}>{item.description}</Text>
+                <Image style={styles.exerciseImage} source={{uri: item.image}}/>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 5,
+        alignItems: 'center',
+        backgroundColor: '#202020'
+    },
+    titleText: {
+        padding: 5,
+        fontSize: 35,
+        fontWeight:'bold',
+        textDecorationLine: 'underline',
+        color:'#BCCF03'
+    },
+    exerciseImage: {
+        width: 150,
+        height: 150,
+    },
+});

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b9002d1-1f68-4359-8a6a-a24897fd698b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/styles/Colors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/TrainingSchemaListItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/images/detailIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/images/editIcon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/screens/DetailScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/DetailScreen.js" afterDir="false" />
@@ -24,8 +26,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+            <state relative-caret-position="391">
+              <caret line="38" column="30" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="30" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -36,15 +38,13 @@
       <file leaf-file-name="LoginScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/screens/LoginScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="408">
+              <caret line="51" selection-start-line="51" selection-end-line="52" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#251#283#0" />
                 <element signature="e#214#243#0" />
-                <element signature="e#523#556#0" />
                 <element signature="e#583#616#0" />
-                <element signature="e#599#1026#0" />
                 <element signature="e#1024#1518#0" />
               </folding>
             </state>
@@ -54,7 +54,7 @@
       <file leaf-file-name="SettingsScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/screens/SettingsScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="187">
               <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -66,8 +66,8 @@
       <file leaf-file-name="DetailScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/screens/DetailScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="298">
+              <caret line="19" column="80" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -84,16 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="club9400.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/images/club9400.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
       <file leaf-file-name="HomeScreen.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/screens/HomeScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="272">
+              <caret line="70" lean-forward="true" selection-start-line="69" selection-start-column="37" selection-end-line="70" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -101,7 +96,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TrainingSchemaListItem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/TrainingSchemaListItem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#250#308#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>state</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,11 +130,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/screens/SettingsScreen.js" />
-        <option value="$PROJECT_DIR$/app/screens/DetailScreen.js" />
         <option value="$PROJECT_DIR$/app/styles/Colors.js" />
+        <option value="$PROJECT_DIR$/app/components/TrainingSchemaListItem.js" />
         <option value="$PROJECT_DIR$/App.js" />
-        <option value="$PROJECT_DIR$/app/screens/LoginScreen.js" />
+        <option value="$PROJECT_DIR$/app/screens/DetailScreen.js" />
         <option value="$PROJECT_DIR$/app/screens/HomeScreen.js" />
+        <option value="$PROJECT_DIR$/app/screens/LoginScreen.js" />
       </list>
     </option>
   </component>
@@ -156,6 +177,12 @@
               <item name="fitness-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="fitness-app" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fitness-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fitness-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fitness-app" type="b2602c69:ProjectViewProjectNode" />
@@ -219,18 +246,17 @@
       <workItem from="1530461119521" duration="3207000" />
       <workItem from="1531840772164" duration="1221000" />
       <workItem from="1531992065244" duration="599000" />
-      <workItem from="1532089539409" duration="10004000" />
+      <workItem from="1532089539409" duration="29660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29446000" />
+    <option name="totallyTimeSpent" value="49102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -238,7 +264,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30827886" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30827886" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -255,6 +281,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/App.js">
@@ -312,9 +343,7 @@
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#251#283#0" />
             <element signature="e#214#243#0" />
-            <element signature="e#523#556#0" />
             <element signature="e#583#616#0" />
-            <element signature="e#599#1026#0" />
             <element signature="e#1024#1518#0" />
           </folding>
         </state>
@@ -375,9 +404,7 @@
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#251#283#0" />
             <element signature="e#214#243#0" />
-            <element signature="e#523#556#0" />
             <element signature="e#583#616#0" />
-            <element signature="e#599#1026#0" />
             <element signature="e#1024#1518#0" />
           </folding>
         </state>
@@ -438,9 +465,7 @@
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#251#283#0" />
             <element signature="e#214#243#0" />
-            <element signature="e#523#556#0" />
             <element signature="e#583#616#0" />
-            <element signature="e#599#1026#0" />
             <element signature="e#1024#1518#0" />
           </folding>
         </state>
@@ -594,9 +619,12 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/club9400.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/SettingsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="187">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -604,16 +632,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/club9400.jpg">
+    <entry file="file://$PROJECT_DIR$/app/images/Naamloos.jpg">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/TrainingSchemaListItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#250#308#0" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/images/club9400.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/images/editIcon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        <state relative-caret-position="391">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="30" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -627,36 +669,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/LoginScreen.js">
+    <entry file="file://$PROJECT_DIR$/app/screens/DetailScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="298">
+          <caret line="19" column="80" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#251#283#0" />
-            <element signature="e#214#243#0" />
-            <element signature="e#523#556#0" />
-            <element signature="e#583#616#0" />
-            <element signature="e#599#1026#0" />
-            <element signature="e#1024#1518#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/DetailScreen.js">
+    <entry file="file://$PROJECT_DIR$/app/screens/LoginScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="408">
+          <caret line="51" selection-start-line="51" selection-end-line="52" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#251#283#0" />
+            <element signature="e#214#243#0" />
+            <element signature="e#583#616#0" />
+            <element signature="e#1024#1518#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/HomeScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="272">
+          <caret line="70" lean-forward="true" selection-start-line="69" selection-start-column="37" selection-end-line="70" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
