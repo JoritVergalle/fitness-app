@@ -26,9 +26,6 @@ const RootNavigator = createStackNavigator(
     {
         Login: {
             screen: LoginScreen,
-            navigationOptions: {
-                title: "Log In"
-            }
         },
         Home: {
             screen: HomeScreen,
@@ -51,6 +48,15 @@ const RootNavigator = createStackNavigator(
     },
     {
         initialRouteName: 'Login',
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#0F0F0F',
+            },
+            headerTintColor: '#FFFFFF',
+            headerTitleStyle: {
+                fontWeight: 'bold',
+            },
+        },
     }
 );
 
