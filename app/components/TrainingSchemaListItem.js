@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 
-export default class LoginScreen extends React.PureComponent {
+export default class LoginScreen extends React.Component {
 
     _onPressShowEdit() {
         this.props.openEdit(this.props.item);
@@ -19,7 +19,7 @@ export default class LoginScreen extends React.PureComponent {
                         <View style={styles.columnContainer}>
                             <Text style={styles.exerciseTitleText}>{this.props.item.name}</Text>
                             {/*<Text>{item.type === 'Cardio' ? item.watt + ' Watt voor ' + item.minutes + ' minuten' :'todo' }</Text>*/}
-                            {this.props.item.type === 'Cardio' ? <View><Text style={styles.exerciseSmallText}>{this.props.item.watt + ' Watt'}</Text><Text style={styles.exerciseSmallText}>{this.props.item.minutes + ' Minuten'}</Text></View> : <View><Text style={styles.exerciseSmallText}>{this.props.item.KG + ' Kg'}</Text><Text style={styles.exerciseSmallText}>{'3 x '+ this.props.item.amount}</Text></View> }
+                            {this.props.item.type === 'Cardio' ? <View><Text style={styles.exerciseSmallText}>{this.props.item.watt + ' Watt'}</Text><Text style={styles.exerciseSmallText}>{this.props.item.minutes + ' Minuten'}</Text></View> : <View><Text style={styles.exerciseSmallText}>{this.props.item.kg + ' Kg'}</Text><Text style={styles.exerciseSmallText}>{'3 x '+ this.props.item.amount}</Text></View> }
                         </View>
                     </View>
                     <View style={styles.iconContainer}>
