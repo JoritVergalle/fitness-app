@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b9002d1-1f68-4359-8a6a-a24897fd698b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/TrainingSchemaListItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/images/detailIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/images/editIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/DetailScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/DetailScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/TrainingSchemaListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/TrainingSchemaListItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/LoginScreen.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,7 +60,7 @@
       <file leaf-file-name="DetailScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/screens/DetailScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
+            <state relative-caret-position="323">
               <caret line="19" column="80" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -87,10 +81,12 @@
       <file leaf-file-name="HomeScreen.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/screens/HomeScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="70" lean-forward="true" selection-start-line="69" selection-start-column="37" selection-end-line="70" />
+            <state relative-caret-position="340">
+              <caret line="89" column="6" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#205#431#0" />
+                <element signature="e#4673#4699#0" />
               </folding>
             </state>
           </provider>
@@ -99,11 +95,10 @@
       <file leaf-file-name="TrainingSchemaListItem.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/TrainingSchemaListItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="102">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#250#308#0" />
               </folding>
             </state>
           </provider>
@@ -120,8 +115,17 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>\&lt;Image style\=\{styles\.exerciseImage\} source\=\{\{uri\: item\.image\}\}\/\&gt;\n                        \&lt;View style\=\{styles\.columnContainer\}\&gt;\n                            \&lt;Text style\=\{styles\.exerciseTitleText\}\&gt;\{item\.name\}\&lt;\/Text\&gt;\n                            \{\/\*\&lt;Text\&gt;\{item\.type \=\=\= \'Cardio\' \? item\.watt \+ \' Watt voor \' \+ item\.minutes \+ \' minuten\' \:\'todo\' \}\&lt;\/Text\&gt;\*\/\}\n                            \{item\.type \=\=\= \'Cardio\' \? \&lt;View\&gt;\&lt;Text style\=\{styles\.exerciseSmallText\}\&gt;\{item\.watt \+ \' Watt\'\}\&lt;\/Text\&gt;\&lt;Text style\=\{styles\.exerciseSmallText\}\&gt;\{item\.minutes \+ \' Minuten\'\}\&lt;\/Text\&gt;\&lt;\/View\&gt; \: \&lt;View\&gt;\&lt;Text style\=\{styles\.exerciseSmallText\}\&gt;\{item\.KG \+ \' Kg\'\}\&lt;\/Text\&gt;\&lt;Text style\=\{styles\.exerciseSmallText\}\&gt;\{\'3 x \'\+ item\.amount\}\&lt;\/Text\&gt;\&lt;\/View\&gt; \}\n                        \&lt;\/View\&gt;\n                    \&lt;\/View\&gt;\n                    \&lt;View style\=\{styles\.iconContainer\}\&gt;\n                        \&lt;TouchableOpacity onPress\=\{this\._onPressEdit\(\)\}\&gt;\n                            \&lt;Image style\=\{styles\.editImage\} source\=\{require\(\'\.\.\/images\/editIcon\.png\'\)\}\/\&gt;\n                        \&lt;\/TouchableOpacity\&gt;\n                        \&lt;TouchableOpacity onPress\=\{this\._onPressShowDetails\(item\)\}\&gt;\n                            \&lt;Image style\=\{styles\.detailImage\} source\=\{require\(\'\.\.\/images\/detailIcon\.png\'\)\}\/\&gt;\n                        \&lt;\/TouchableOpacity\&gt;\n                    \&lt;\/View\&gt;\n                \&lt;\/View\&gt;</find>
+      <find>console.</find>
+      <find>console.lo</find>
+      <find>conso</find>
       <find>state</find>
+      <find>item</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>this.props.item</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,11 +135,11 @@
       <list>
         <option value="$PROJECT_DIR$/app/screens/SettingsScreen.js" />
         <option value="$PROJECT_DIR$/app/styles/Colors.js" />
-        <option value="$PROJECT_DIR$/app/components/TrainingSchemaListItem.js" />
         <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/app/screens/DetailScreen.js" />
-        <option value="$PROJECT_DIR$/app/screens/HomeScreen.js" />
         <option value="$PROJECT_DIR$/app/screens/LoginScreen.js" />
+        <option value="$PROJECT_DIR$/app/components/TrainingSchemaListItem.js" />
+        <option value="$PROJECT_DIR$/app/screens/HomeScreen.js" />
       </list>
     </option>
   </component>
@@ -246,25 +250,27 @@
       <workItem from="1530461119521" duration="3207000" />
       <workItem from="1531840772164" duration="1221000" />
       <workItem from="1531992065244" duration="599000" />
-      <workItem from="1532089539409" duration="29660000" />
+      <workItem from="1532089539409" duration="34004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49102000" />
+    <option name="totallyTimeSpent" value="53446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30827886" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30827886" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -273,7 +279,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +336,8 @@
           <caret line="7" column="191" selection-start-line="7" selection-start-column="191" selection-end-line="7" selection-end-column="191" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#205#431#0" />
+            <element signature="e#4673#4699#0" />
           </folding>
         </state>
       </provider>
@@ -392,6 +399,8 @@
           <caret line="7" column="191" selection-start-line="7" selection-start-column="191" selection-end-line="7" selection-end-column="191" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#205#431#0" />
+            <element signature="e#4673#4699#0" />
           </folding>
         </state>
       </provider>
@@ -453,6 +462,8 @@
           <caret line="7" column="191" selection-start-line="7" selection-start-column="191" selection-end-line="7" selection-end-column="191" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#205#431#0" />
+            <element signature="e#4673#4699#0" />
           </folding>
         </state>
       </provider>
@@ -504,6 +515,8 @@
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#205#431#0" />
+            <element signature="e#4673#4699#0" />
           </folding>
         </state>
       </provider>
@@ -551,6 +564,8 @@
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#205#431#0" />
+            <element signature="e#4673#4699#0" />
           </folding>
         </state>
       </provider>
@@ -608,6 +623,8 @@
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#205#431#0" />
+            <element signature="e#4673#4699#0" />
           </folding>
         </state>
       </provider>
@@ -635,17 +652,6 @@
     <entry file="file://$PROJECT_DIR$/app/images/Naamloos.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/TrainingSchemaListItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#250#308#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/images/club9400.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -671,7 +677,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/DetailScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
+        <state relative-caret-position="323">
           <caret line="19" column="80" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -693,12 +699,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/HomeScreen.js">
+    <entry file="file://$PROJECT_DIR$/app/components/TrainingSchemaListItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="70" lean-forward="true" selection-start-line="69" selection-start-column="37" selection-end-line="70" />
+        <state relative-caret-position="102">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/HomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="89" column="6" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#205#431#0" />
+            <element signature="e#4673#4699#0" />
           </folding>
         </state>
       </provider>
