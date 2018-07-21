@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList, Image, TouchableOpacity} from 'react-native';
 
-//import TrainingSchemaListItem from '../components/TrainingSchemaListItem';
+import TrainingSchemaListItem from '../components/TrainingSchemaListItem';
 
 export default class HomeScreen extends React.Component {
     constructor(props) {
@@ -80,22 +80,29 @@ export default class HomeScreen extends React.Component {
 
     componentDidMount() {
         const { navigation } = this.props;
-        console.log(navigation.getParam('user'));
         if(this.state.user !== navigation.getParam('user')){
             this.setState({user: navigation.getParam('user')});
         }
     }
 
-    _onPressEdit() {
+    _openEdit = (item) => {
         console.log('hai');
-    }
+    };
 
-    _onPressShowDetails(item) {
-        console.log('hey');
+    _openDetails = (item) => {
         this.props.navigation.navigate('Detail', {
             item: item,
         });
-    }
+    };
+
+    _renderItem = ({item}) => (
+        <TrainingSchemaListItem
+            id={item._id}
+            openDetails={this._openDetails}
+            openEdit={this._openEdit}
+            item={item}
+        />
+    );
 
     render() {
         return (
@@ -103,27 +110,28 @@ export default class HomeScreen extends React.Component {
                 <FlatList
                 data={this.state.user.trainingsSchema}
                 keyExtractor={item => item._id}
-                removeClippedSubviews={false}
-                renderItem={({item}) =>
-                    <View style={styles.itemContainer}>
-                        <View style={styles.rowContainer}>
-                            <Image style={styles.exerciseImage} source={{uri: item.image}}/>
-                            <View style={styles.columnContainer}>
-                                <Text style={styles.exerciseTitleText}>{item.name}</Text>
-                                {/*<Text>{item.type === 'Cardio' ? item.watt + ' Watt voor ' + item.minutes + ' minuten' :'todo' }</Text>*/}
-                                {item.type === 'Cardio' ? <View><Text style={styles.exerciseSmallText}>{item.watt + ' Watt'}</Text><Text style={styles.exerciseSmallText}>{item.minutes + ' Minuten'}</Text></View> : <View><Text style={styles.exerciseSmallText}>{item.KG + ' Kg'}</Text><Text style={styles.exerciseSmallText}>{'3 x '+ item.amount}</Text></View> }
-                            </View>
-                        </View>
-                        <View style={styles.iconContainer}>
-                            <TouchableOpacity onPress={this._onPressEdit()}>
-                                <Image style={styles.editImage} source={require('../images/editIcon.png')}/>
-                            </TouchableOpacity>
-                            <TouchableOpacity onPress={this._onPressShowDetails(item)}>
-                                <Image style={styles.detailImage} source={require('../images/detailIcon.png')}/>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                }/>
+                renderItem={this._renderItem}
+                // renderItem={({item}) =>
+                //     <View style={styles.itemContainer}>
+                //         <View style={styles.rowContainer}>
+                //             <Image style={styles.exerciseImage} source={{uri: item.image}}/>
+                //             <View style={styles.columnContainer}>
+                //                 <Text style={styles.exerciseTitleText}>{item.name}</Text>
+                //                 {/*<Text>{item.type === 'Cardio' ? item.watt + ' Watt voor ' + item.minutes + ' minuten' :'todo' }</Text>*/}
+                //                 {item.type === 'Cardio' ? <View><Text style={styles.exerciseSmallText}>{item.watt + ' Watt'}</Text><Text style={styles.exerciseSmallText}>{item.minutes + ' Minuten'}</Text></View> : <View><Text style={styles.exerciseSmallText}>{item.KG + ' Kg'}</Text><Text style={styles.exerciseSmallText}>{'3 x '+ item.amount}</Text></View> }
+                //             </View>
+                //         </View>
+                //         <View style={styles.iconContainer}>
+                //             <TouchableOpacity onPress={this._onPressEdit()}>
+                //                 <Image style={styles.editImage} source={require('../images/editIcon.png')}/>
+                //             </TouchableOpacity>
+                //             <TouchableOpacity onPress={this._onPressShowDetails(item)}>
+                //                 <Image style={styles.detailImage} source={require('../images/detailIcon.png')}/>
+                //             </TouchableOpacity>
+                //         </View>
+                //     </View>
+                // }
+                />
             </View>
         );
     }
