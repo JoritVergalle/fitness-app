@@ -22,82 +22,85 @@ export default class HomeScreen extends React.Component {
             watt: '',
             minutes: '',
             type: '',
-            user: {
-                name: 'Jorit',
-                password: '123',
-                trainingsSchema: [{
-                    "_id":"5b4f4388d1e0bd202c4b0860",
-                    "name":"Fiets",
-                    "description":"stap erop, getalleks ingeven & letsgoooh",
-                    "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
-                    "type":"Cardio",
-                    "watt":350,
-                    "minutes":15,
-                },
-                {
-                    "_id":"5b4f4388d1e0bd202c4b0860",
-                    "name":"Loopband1",
-                    "description":"stap erop, getalleks ingeven & letsgoooh",
-                    "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
-                    "type":"Cardio",
-                    "watt":350,
-                    "minutes":15,
-                },
-                {
-                    "_id":"5b4f4388d1e0bd202c4b0860",
-                    "name":"Loopband2",
-                    "description":"stap erop, getalleks ingeven & letsgoooh",
-                    "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
-                    "type":"Cardio",
-                    "watt":350,
-                    "minutes":15,
-                },
-                {
-                    "_id":"5b4f4388d1e0bd202c4b0860",
-                    "name":"Loopband3",
-                    "description":"stap erop, getalleks ingeven & letsgoooh",
-                    "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
-                    "type":"Cardio",
-                    "watt":350,
-                    "minutes":15,
-                },
-                {
-                    "_id":"5b4f4388d1e0bd202c4b0860",
-                    "name":"Loopband4",
-                    "description":"stap erop, getalleks ingeven & letsgoooh",
-                    "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
-                    "type":"Cardio",
-                    "watt":350,
-                    "minutes":15,
-                },
-                {
-                    "_id":"5b4f4388d1e0bd202c4b0860",
-                    "name":"Loopband5",
-                    "description":"stap erop, getalleks ingeven & letsgoooh",
-                    "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
-                    "type":"Cardio",
-                    "watt":350,
-                    "minutes":15,
-                },
-                {
-                    "_id":"5b4f4388d1e0bd202c4b0860",
-                    "name":"Shoulder press6",
-                    "description":"\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"",
-                    "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
-                    "type":"Power",
-                    "kg":35,
-                    "amount":15,
-                }]
-                ,_id:"5b4f4a8e753a00106cc9ceac",
-            }
+            amount: '',
+            kg: '',
+            _id: '',
+             user: {
+            //     name: 'Jorit',
+            //     password: '123',
+            //     trainingsSchema: [{
+            //         "_id":"5b4f4388d1e0bd202c4b0860",
+            //         "name":"Fiets",
+            //         "description":"stap erop, getalleks ingeven & letsgoooh",
+            //         "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
+            //         "type":"Cardio",
+            //         "watt":350,
+            //         "minutes":15,
+            //     },
+            //     {
+            //         "_id":"5b4f4388d1e0bd202c4b0860",
+            //         "name":"Loopband1",
+            //         "description":"stap erop, getalleks ingeven & letsgoooh",
+            //         "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
+            //         "type":"Cardio",
+            //         "watt":350,
+            //         "minutes":15,
+            //     },
+            //     {
+            //         "_id":"5b4f4388d1e0bd202c4b0860",
+            //         "name":"Loopband2",
+            //         "description":"stap erop, getalleks ingeven & letsgoooh",
+            //         "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
+            //         "type":"Cardio",
+            //         "watt":350,
+            //         "minutes":15,
+            //     },
+            //     {
+            //         "_id":"5b4f4388d1e0bd202c4b0860",
+            //         "name":"Loopband3",
+            //         "description":"stap erop, getalleks ingeven & letsgoooh",
+            //         "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
+            //         "type":"Cardio",
+            //         "watt":350,
+            //         "minutes":15,
+            //     },
+            //     {
+            //         "_id":"5b4f4388d1e0bd202c4b0860",
+            //         "name":"Loopband4",
+            //         "description":"stap erop, getalleks ingeven & letsgoooh",
+            //         "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
+            //         "type":"Cardio",
+            //         "watt":350,
+            //         "minutes":15,
+            //     },
+            //     {
+            //         "_id":"5b4f4388d1e0bd202c4b0860",
+            //         "name":"Loopband5",
+            //         "description":"stap erop, getalleks ingeven & letsgoooh",
+            //         "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
+            //         "type":"Cardio",
+            //         "watt":350,
+            //         "minutes":15,
+            //     },
+            //     {
+            //         "_id":"5b4f4388d1e0bd202c4b0860",
+            //         "name":"Shoulder press6",
+            //         "description":"\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"",
+            //         "image":"https://d30y9cdsu7xlg0.cloudfront.net/png/185394-200.png",
+            //         "type":"Power",
+            //         "kg":35,
+            //         "amount":15,
+            //     }]
+            //     ,_id:"5b4f4a8e753a00106cc9ceac",
+             }
         };
     };
 
     componentDidMount() {
-        // const { navigation } = this.props;
-        // if(this.state.user !== navigation.getParam('user')){
-        //     this.setState({user: navigation.getParam('user')});
-        // }
+        const { navigation } = this.props;
+        if(this.state.user !== navigation.getParam('user')){
+            this.setState({user: navigation.getParam('user')});
+        }
     }
 
     setModalVisible(visible) {
@@ -105,7 +108,7 @@ export default class HomeScreen extends React.Component {
     }
 
     _openEdit = (item) => {
-        this.setState({titleExercise: item.name, type: item.type, watt: item.watt, minutes: item.minutes, kg: item.kg, amount: item.amount}, () => {
+        this.setState({titleExercise: item.name, type: item.type, watt: item.watt, minutes: item.minutes, kg: item.kg, amount: item.amount, _id: item._id}, () => {
             this.setModalVisible(true);
             }
         );
@@ -142,6 +145,24 @@ export default class HomeScreen extends React.Component {
     };
 
     _onEdit = () => {
+        fetch('https://fitness-club-backend.herokuapp.com/API/users/'+this.state.user._id+'/exercises/'+this.state._id, {
+            method: "PUT",
+            body: JSON.stringify({
+                "_id": this.state._id,
+                "type": this.state.type,
+                "watt": this.state.watt,
+                "minutes": this.state.minutes,
+                "amount": this.state.amount,
+                "kg": this.state.kg
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }).then(function(response) {
+
+        }, function(error) {
+            console.error(error);
+        });
         let user = this.state.user;
         if(this.state.type === 'Cardio') {
             _.find(user.trainingsSchema, { 'name': this.state.titleExercise}).watt = _.toInteger(this.state.watt);
@@ -151,8 +172,6 @@ export default class HomeScreen extends React.Component {
             _.find(user.trainingsSchema, { 'name': this.state.titleExercise}).kg = _.toInteger(this.state.kg);
             _.find(user.trainingsSchema, { 'name': this.state.titleExercise}).amount = _.toInteger(this.state.amount);
         }
-        // _.find(user.trainingsSchema, { 'name': this.state.titleExercise}).watt = _.toInteger(this.state.watt);
-        // _.find(user.trainingsSchema, { 'name': this.state.titleExercise}).minutes = _.toInteger(this.state.minutes);
         this.setState({user: user}, () => {
             this.setModalVisible(false);
         })
@@ -169,9 +188,18 @@ export default class HomeScreen extends React.Component {
             [
                 {text: 'Nee'},
                 {text: 'Ja', onPress: () => {
+                        console.log('http://fitness-club-backend.herokuapp.com/API/users/'+this.state.user._id+'/exercises/'+this.state._id);
+                        fetch('http://fitness-club-backend.herokuapp.com/API/users/'+this.state.user._id+'/exercises/'+this.state._id, {
+                            method: 'delete'
+                        }).then(response =>
+                            response.json().then(json => {
+                                return json;
+                            })
+                        );
                     let user = this.state.user;
                     _.remove(user.trainingsSchema, (item) => {return item.name === this.state.titleExercise;});
                     this.setModalVisible(false);
+
                 }}
             ]
         );
