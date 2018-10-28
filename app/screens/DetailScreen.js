@@ -16,7 +16,7 @@ export default class DetailScreen extends React.Component {
             <View style={styles.container}>
 
                 <Text style={styles.titleText}>{item.name}</Text>
-                <Text style={{textAlign: 'center', color: 'white'}}>{item.description}</Text>
+                <Text style={styles.descriptionText}>{item.description}</Text>
                 <Image style={styles.exerciseImage} source={{uri: item.image}}/>
             </View>
         );
@@ -36,6 +36,11 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
         textDecorationLine: 'underline',
         color:'#BCCF03'
+    },
+    descriptionText: {
+        textAlign: 'center',
+        color: 'white',
+        marginBottom: 10
     },
     exerciseImage: {
         width: 150,

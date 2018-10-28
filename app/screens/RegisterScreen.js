@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, KeyboardAvoidingView, Image, TextInput, Button} from 'react-native';
+import {View, StyleSheet, KeyboardAvoidingView, Text, TextInput, Button} from 'react-native';
 
 export default class LoginScreen extends React.Component {
     constructor(props) {
@@ -8,10 +8,6 @@ export default class LoginScreen extends React.Component {
             name: '',
             password: ''
         };
-    };
-
-    static navigationOptions = {
-        header: null,
     };
 
     _onChangeName(value) {
@@ -26,9 +22,8 @@ export default class LoginScreen extends React.Component {
         })
     };
 
-    _onPressLogin() {
-
-        return fetch('https://fitness-club-backend.herokuapp.com/API/login', {
+    _onPressRegister() {
+        return fetch('https://fitness-club-backend.herokuapp.com/API/register', {
             method: "POST",
             body: JSON.stringify({
                 "username": this.state.name,
@@ -37,30 +32,14 @@ export default class LoginScreen extends React.Component {
             headers: {
                 "Content-Type": "application/json"
             },
-        }).then((response) => response.json())
-            .then((responseJson) => {
-                this.props.navigation.navigate('Home', {
-                    user: responseJson,
-                });
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    };
-
-    _onNavigateRegister() {
-        this.props.navigation.navigate('Register');
+        }).then(this.props.navigation.goBack());
     };
 
     render() {
         return (
             <KeyboardAvoidingView style={styles.container} behavior="padding">
-                <View style={styles.iconContainer}>
-                    <Image style={styles.icon}
-                           source={require('../images/club9400.jpg')}/>
-                    <Button onPress={this._onNavigateRegister.bind(this)}
-                             title="Make new account"
-                             color="#BCCF03"/>
+                <View style={styles.registertextContainer}>
+                    <Text style={styles.registerText}>Enter username & password</Text>
                 </View>
                 <View style={styles.textContainer}>
                     <TextInput style={styles.inputField}
@@ -72,8 +51,8 @@ export default class LoginScreen extends React.Component {
                                placeholder={'Password'}
                                secureTextEntry={true}
                                onChangeText={(value) => this._onChangePassword(value)}/>
-                    <Button onPress={this._onPressLogin.bind(this)}
-                             title="Login"
+                    <Button onPress={this._onPressRegister.bind(this)}
+                             title="Register"
                              color="#BCCF03"/>
                 </View>
             </KeyboardAvoidingView>
@@ -86,17 +65,19 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#202020'
     },
-    iconContainer: {
+    registerText: {
+        color: "#BCCF03",
+        fontSize: 35,
+        fontWeight:'bold',
+        textAlign: 'center'
+    },
+    registertextContainer: {
         alignItems: 'center',
         flexGrow: 1,
         justifyContent: 'center',
     },
     textContainer: {
         padding: 15
-    },
-    icon: {
-        width: 240,
-        height: 180,
     },
     inputField: {
         height: 40,
