@@ -1,5 +1,16 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "name": "Club9400",
+    "icon": "./app/images/clubIcon.png",
+    "version": "1.0.0",
+    "slug": "club9400-slug",
+    "sdkVersion": "27.0.0",
+    "ios": {
+      "bundleIdentifier": "com.joritVergalle.fitnessApp"
+    },
+    "android": {
+      "package": "com.joritVergalle.fitnessApp"
+    },
+    "privacy":"unlisted"
   }
 }

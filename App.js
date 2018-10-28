@@ -12,15 +12,7 @@ import LoginScreen from "./app/screens/LoginScreen";
 import HomeScreen from "./app/screens/HomeScreen";
 import DetailScreen from "./app/screens/DetailScreen";
 import SettingsScreen from "./app/screens/SettingsScreen";
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+import RegisterScreen from './app/screens/RegisterScreen';
 
 const RootNavigator = createStackNavigator(
     {
@@ -43,6 +35,12 @@ const RootNavigator = createStackNavigator(
             screen: SettingsScreen,
             navigationOptions: {
                 title: "Settings"
+            }
+        },
+        Register: {
+            screen: RegisterScreen,
+            navigationOptions: {
+                title: "Register"
             }
         }
     },
