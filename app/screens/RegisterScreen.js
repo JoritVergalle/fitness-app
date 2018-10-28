@@ -10,10 +10,6 @@ export default class LoginScreen extends React.Component {
         };
     };
 
-    static navigationOptions = {
-        header: null,
-    };
-
     _onChangeName(value) {
         this.setState({
             name: value
