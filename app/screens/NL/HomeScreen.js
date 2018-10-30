@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import _ from 'lodash';
 
-import TrainingSchemaListItem from '../components/TrainingSchemaListItem';
+import TrainingSchemaListItem from '../../components/TrainingSchemaListItem';
 
 export default class HomeScreen extends React.Component {
     constructor(props) {

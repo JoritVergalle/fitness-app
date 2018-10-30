@@ -1,7 +1,20 @@
 import React from 'react';
 import {View, StyleSheet, KeyboardAvoidingView, Text, TextInput, Button} from 'react-native';
 
-export default class LoginScreen extends React.Component {
+export default class RegisterScreen extends React.Component {
+
+    static navigationOptions = ({ navigation }) => {
+        return {
+            headerRight: (
+                <Button
+                    onPress={() => navigation.replace('Register_ENG')}
+                    title="ENG"
+                    color="#BCCF03"
+                />
+            )
+        };
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -39,7 +52,7 @@ export default class LoginScreen extends React.Component {
         return (
             <KeyboardAvoidingView style={styles.container} behavior="padding">
                 <View style={styles.registertextContainer}>
-                    <Text style={styles.registerText}>Enter username & password</Text>
+                    <Text style={styles.registerText}>Geef een username & password in</Text>
                 </View>
                 <View style={styles.textContainer}>
                     <TextInput style={styles.inputField}
@@ -52,7 +65,7 @@ export default class LoginScreen extends React.Component {
                                secureTextEntry={true}
                                onChangeText={(value) => this._onChangePassword(value)}/>
                     <Button onPress={this._onPressRegister.bind(this)}
-                             title="Register"
+                             title="Registeer"
                              color="#BCCF03"/>
                 </View>
             </KeyboardAvoidingView>
