@@ -8,11 +8,12 @@ export default class App extends React.Component {
   }
 }
 
-import LoginScreen from "./app/screens/LoginScreen";
-import HomeScreen from "./app/screens/HomeScreen";
-import DetailScreen from "./app/screens/DetailScreen";
-import SettingsScreen from "./app/screens/SettingsScreen";
-import RegisterScreen from './app/screens/RegisterScreen';
+import LoginScreen from "./app/screens/NL/LoginScreen";
+import HomeScreen from "./app/screens/NL/HomeScreen";
+import DetailScreen from "./app/screens/NL/DetailScreen";
+import SettingsScreen from "./app/screens/NL/SettingsScreen";
+import RegisterScreen from './app/screens/NL/RegisterScreen';
+import RegisterScreen_ENG from './app/screens/ENG/RegisterScreen_ENG';
 
 const RootNavigator = createStackNavigator(
     {
@@ -39,6 +40,12 @@ const RootNavigator = createStackNavigator(
         },
         Register: {
             screen: RegisterScreen,
+            navigationOptions: {
+                title: "Registeer"
+            }
+        },
+        Register_ENG: {
+            screen: RegisterScreen_ENG,
             navigationOptions: {
                 title: "Register"
             }
