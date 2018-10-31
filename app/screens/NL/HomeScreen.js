@@ -7,6 +7,7 @@ import {
     Alert
 } from 'react-native';
 import _ from 'lodash';
+import { REACT_APP_BACKEND_URL } from 'react-native-dotenv'
 
 import TrainingSchemaListPowerItem from '../../components/TrainingSchemaListPowerItem';
 import TrainingSchemaListCardioWattItem from '../../components/TrainingSchemaListCardioWattItem';
@@ -55,7 +56,7 @@ export default class HomeScreen extends React.Component {
     };
 
     _onEdit = (item) => {
-        fetch('https://fitness-club-backend.herokuapp.com/API/users/' + this.state.user._id + '/exercises/' + item._id, {
+        fetch(REACT_APP_BACKEND_URL + 'API/users/' + this.state.user._id + '/exercises/' + item._id, {
             method: "PUT",
             body: JSON.stringify(item),
             headers: {
@@ -78,7 +79,7 @@ export default class HomeScreen extends React.Component {
                 {text: 'Nee'},
                 {
                     text: 'Ja', onPress: () => {
-                        fetch('http://fitness-club-backend.herokuapp.com/API/users/' + this.state.user._id + '/exercises/' + item._id, {
+                        fetch(REACT_APP_BACKEND_URL + 'API/users/' + this.state.user._id + '/exercises/' + item._id, {
                             method: 'delete'
                         }).then(response =>
                             response.json().then(json => {
