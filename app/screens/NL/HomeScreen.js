@@ -11,7 +11,9 @@ import {
 } from 'react-native';
 import _ from 'lodash';
 
-import TrainingSchemaListItem from '../../components/TrainingSchemaListItem';
+import TrainingSchemaListPowerItem from '../../components/TrainingSchemaListPowerItem';
+import TrainingSchemaListCardioWattItem from '../../components/TrainingSchemaListCardioWattItem';
+import TrainingSchemaListCardioKMUItem from '../../components/TrainingSchemaListCardioKMUItem';
 
 export default class HomeScreen extends React.Component {
     constructor(props) {
@@ -25,15 +27,15 @@ export default class HomeScreen extends React.Component {
             amount: '',
             kg: '',
             _id: '',
-             user: ''
+             user: '',
         };
     };
 
     componentDidMount() {
-        // const { navigation } = this.props;
-        // if(this.state.user !== navigation.getParam('user')){
-        //     this.setState({user: navigation.getParam('user')});
-        // }
+        const { navigation } = this.props;
+        if(this.state.user !== navigation.getParam('user')){
+            this.setState({user: navigation.getParam('user')});
+        }
     }
 
     setModalVisible(visible) {
@@ -41,7 +43,7 @@ export default class HomeScreen extends React.Component {
     }
 
     _openEdit = (item) => {
-        this.setState({titleExercise: item.name, type: item.type, watt: item.watt, minutes: item.minutes, kg: item.kg, amount: item.amount, _id: item._id}, () => {
+        this.setState({titleExercise: item.name, type: item.type, watt: item.watt, KMU: item.KMU, minutes: item.minutes, kg: item.kg, amount: item.amount, _id: item._id}, () => {
             this.setModalVisible(true);
             }
         );
@@ -84,6 +86,7 @@ export default class HomeScreen extends React.Component {
                 "_id": this.state._id,
                 "type": this.state.type,
                 "watt": this.state.watt,
+                "KMU": this.state.KMU,
                 "minutes": this.state.minutes,
                 "amount": this.state.amount,
                 "kg": this.state.kg
@@ -138,14 +141,82 @@ export default class HomeScreen extends React.Component {
         );
     };
 
-    _renderItem = ({item}) => (
-        <TrainingSchemaListItem
-            id={item._id}
-            openDetails={this._openDetails}
-            openEdit={this._openEdit}
-            item={item}
-        />
-    );
+    _renderItem = ({item}) => {
+        if(item.type === 'CardioWatt'){
+            return <TrainingSchemaListCardioWattItem
+                id={item._id}
+                openDetails={this._openDetails}
+                openEdit={this._openEdit}
+                item={item}
+            />
+        } else if (item.type === 'CardioKMU') {
+            return <TrainingSchemaListCardioKMUItem
+                id={item._id}
+                openDetails={this._openDetails}
+                openEdit={this._openEdit}
+                item={item}
+            />
+        } else if (item.type === 'Power') {
+            return <TrainingSchemaListPowerItem
+                id={item._id}
+                openDetails={this._openDetails}
+                openEdit={this._openEdit}
+                item={item}
+            />
+        }
+    };
+
+    _fillModal() {
+        if(this.state.type === 'CardioWatt') {
+            return <View><View style={styles.rowContainer}>
+                <Text style={styles.textModal}>Watt: </Text>
+                <TextInput
+                    style={styles.textInputValues}
+                    keyboardType='numeric'
+                    value={_.toString(this.state.watt)}
+                    onChangeText={(value) => this._onChangeWatt(value)}/>
+            </View><View style={styles.rowContainer}>
+                <Text style={styles.textModal}>Minuten: </Text>
+                <TextInput
+                    style={styles.textInputValues}
+                    keyboardType='numeric'
+                    value={_.toString(this.state.minutes)}
+                    onChangeText={(value) => this._onChangeMinutes(value)}/>
+            </View></View>
+        } else if(this.state.type === 'CardioKMU'){
+            return <View><View style={styles.rowContainer}>
+                <Text style={styles.textModal}>km/u: </Text>
+                <TextInput
+                    style={styles.textInputValues}
+                    keyboardType='numeric'
+                    value={_.toString(this.state.KMU)}
+                    onChangeText={(value) => this._onChangeWatt(value)}/>
+            </View><View style={styles.rowContainer}>
+                <Text style={styles.textModal}>Minuten: </Text>
+                <TextInput
+                    style={styles.textInputValues}
+                    keyboardType='numeric'
+                    value={_.toString(this.state.minutes)}
+                    onChangeText={(value) => this._onChangeMinutes(value)}/>
+            </View></View>
+        } else if (this.state.type === 'Power') {
+            return <View><View style={styles.rowContainer}>
+                <Text style={styles.textModal}>Kg: </Text>
+                <TextInput
+                    style={styles.textInputValues}
+                    keyboardType='numeric'
+                    value={_.toString(this.state.kg)}
+                    onChangeText={(value) => this._onChangeKg(value)}/>
+            </View><View style={styles.rowContainer}>
+                <Text style={styles.textModal}>3x: </Text>
+                <TextInput
+                    style={styles.textInputValues}
+                    keyboardType='numeric'
+                    value={_.toString(this.state.amount)}
+                    onChangeText={(value) => this._onChangeAmount(value)}/>
+            </View></View>
+        }
+    }
 
     render() {
         return (
@@ -164,57 +235,7 @@ export default class HomeScreen extends React.Component {
                         </View>
                         <View style={styles.modalContentContainer}>
 
-                            {this.state.type === 'Cardio' ? <View><View style={styles.rowContainer}>
-                                    <Text style={styles.textModal}>Watt: </Text>
-                                    <TextInput
-                                        style={styles.textInputValues}
-                                        keyboardType='numeric'
-                                        value={_.toString(this.state.watt)}
-                                        onChangeText={(value) => this._onChangeWatt(value)}/>
-                                </View><View style={styles.rowContainer}>
-                                <Text style={styles.textModal}>Minuten: </Text>
-                                <TextInput
-                                style={styles.textInputValues}
-                                keyboardType='numeric'
-                                value={_.toString(this.state.minutes)}
-                                onChangeText={(value) => this._onChangeMinutes(value)}/>
-                            </View></View>
-                                :
-                                <View><View style={styles.rowContainer}>
-                                    <Text style={styles.textModal}>Kg: </Text>
-                                    <TextInput
-                                        style={styles.textInputValues}
-                                        keyboardType='numeric'
-                                        value={_.toString(this.state.kg)}
-                                        onChangeText={(value) => this._onChangeKg(value)}/>
-                                </View><View style={styles.rowContainer}>
-                                    <Text style={styles.textModal}>3x: </Text>
-                                    <TextInput
-                                        style={styles.textInputValues}
-                                        keyboardType='numeric'
-                                        value={_.toString(this.state.amount)}
-                                        onChangeText={(value) => this._onChangeAmount(value)}/>
-                                </View></View> }
-
-
-                            {/*<View style={styles.rowContainer}>*/}
-                                {/*<Text style={styles.textModal}>Watt: </Text>*/}
-                                {/*<TextInput*/}
-                                    {/*style={styles.textInputValues}*/}
-                                    {/*keyboardType='numeric'*/}
-                                    {/*value={_.toString(this.state.watt)}*/}
-                                    {/*onChangeText={(value) => this._onChangeWatt(value)}/>*/}
-                            {/*</View>*/}
-                            {/*<View style={styles.rowContainer}>*/}
-                                {/*<Text style={styles.textModal}>Minuten: </Text>*/}
-                                {/*<TextInput*/}
-                                    {/*style={styles.textInputValues}*/}
-                                    {/*keyboardType='numeric'*/}
-                                    {/*value={_.toString(this.state.minutes)}*/}
-                                    {/*onChangeText={(value) => this._onChangeMinutes(value)}/>*/}
-                            {/*</View>*/}
-
-
+                            {this._fillModal()}
 
                             <View style={styles.touchableContainer}>
                                 <TouchableOpacity style={styles.cancelTouchable}
@@ -238,26 +259,6 @@ export default class HomeScreen extends React.Component {
                 keyExtractor={item => item._id}
                 renderItem={this._renderItem}
                 extraData={this.state}
-                // renderItem={({item}) =>
-                //     <View style={styles.itemContainer}>
-                //         <View style={styles.rowContainer}>
-                //             <Image style={styles.exerciseImage} source={{uri: item.image}}/>
-                //             <View style={styles.columnContainer}>
-                //                 <Text style={styles.exerciseTitleText}>{item.name}</Text>
-                //                 {/*<Text>{item.type === 'Cardio' ? item.watt + ' Watt voor ' + item.minutes + ' minuten' :'todo' }</Text>*/}
-                //                 {item.type === 'Cardio' ? <View><Text style={styles.exerciseSmallText}>{item.watt + ' Watt'}</Text><Text style={styles.exerciseSmallText}>{item.minutes + ' Minuten'}</Text></View> : <View><Text style={styles.exerciseSmallText}>{item.KG + ' Kg'}</Text><Text style={styles.exerciseSmallText}>{'3 x '+ item.amount}</Text></View> }
-                //             </View>
-                //         </View>
-                //         <View style={styles.iconContainer}>
-                //             <TouchableOpacity onPress={this._onPressEdit()}>
-                //                 <Image style={styles.editImage} source={require('../images/editIcon.png')}/>
-                //             </TouchableOpacity>
-                //             <TouchableOpacity onPress={this._onPressShowDetails(item)}>
-                //                 <Image style={styles.detailImage} source={require('../images/detailIcon.png')}/>
-                //             </TouchableOpacity>
-                //         </View>
-                //     </View>
-                // }
                 />
             </View>
         );
