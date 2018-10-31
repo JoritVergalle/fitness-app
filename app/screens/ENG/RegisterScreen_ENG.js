@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, KeyboardAvoidingView, Text, TextInput, Button} from 'react-native';
+import { REACT_APP_BACKEND_URL } from 'react-native-dotenv'
 
 export default class RegisterScreen_ENG extends React.Component {
     static navigationOptions = ({ navigation }) => {
@@ -43,7 +44,7 @@ export default class RegisterScreen_ENG extends React.Component {
     };
 
     _onPressRegister() {
-        return fetch('https://fitness-club-backend.herokuapp.com/API/register', {
+        return fetch(REACT_APP_BACKEND_URL + 'API/register', {
             method: "POST",
             body: JSON.stringify({
                 "username": this.state.name,

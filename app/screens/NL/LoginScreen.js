@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, KeyboardAvoidingView, Image, TextInput, Button} from 'react-native';
+import { REACT_APP_BACKEND_URL } from 'react-native-dotenv'
 
 export default class LoginScreen extends React.Component {
     constructor(props) {
@@ -28,7 +29,7 @@ export default class LoginScreen extends React.Component {
 
     _onPressLogin() {
 
-        return fetch('https://fitness-club-backend.herokuapp.com/API/login', {
+        return fetch(REACT_APP_BACKEND_URL + 'API/login', {
             method: "POST",
             body: JSON.stringify({
                 "username": this.state.name,
